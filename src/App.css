@@ -280,7 +280,7 @@ ul {
 }
 
 .bg-image{
-  background-image: url('../imgs/background_whats.png');
+  background-image: url('./pages/MainPage/img/background_whats.png');
   background-repeat: repeat;
   opacity: 0.06;
   width: 100%;
