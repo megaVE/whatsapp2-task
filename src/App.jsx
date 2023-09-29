@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/:id" element={<MainPage/>}/>
         <Route path="/" element={<MainPage/>}/>
       </Routes>
     </BrowserRouter>

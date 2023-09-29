@@ -3,8 +3,19 @@ import styles from "./CurrentConversation.module.css"
 import { useState } from "react";
 
 const CurrentConversation = () => {
-    const[image, setImage] = useState("");
-    const[conversation, setConversation] = useState([]);
+    const[image, setImage] = useState("imgs/avatar2.png");
+    const[conversation, setConversation] = useState([
+        {
+            message: "Oi, tudo bem?",
+            messageTime: "",
+            author: "dalsdasloas"
+        },
+        {
+            message: "Cala a boca, puta!",
+            messageTime: "",
+            author: "adasasldasldmas"
+        }
+    ]);
 
     const changeImage = (id) => {
         setImage(`img_${id}.jpg`)
@@ -14,7 +25,7 @@ const CurrentConversation = () => {
         <main className="chat-container">
             <nav className="chat-navbar">
                 <div className="contactinfo-container">
-                    <img className="user-photo" src="imgs/avatar2.png"/>
+                    <img className="user-photo" src={image}/>
                     <p className="user-name">Sabrina Matos</p>
                 </div>
                 <ul className="chattools-container">
