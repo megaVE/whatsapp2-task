@@ -1,0 +1,54 @@
+/* Sidebar Container */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #000;
+    border-right: solid 2px #FF0;
+}
+
+/* Title */
+
+.sidebar h3{
+    text-align: center;
+    color: #FF0;
+    padding-bottom: 20px;
+    border-bottom: solid 2px #FF0;
+}
+
+/* Content Container */
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contacts */
+
+.contact a, .contact a:visited{
+    display: block;
+    padding: 5px 45px;
+    margin: 5px 5px;
+    border: solid 2px #FF0;
+    text-decoration: none;
+    color: #FF0;
+}
+
+.contact a:hover, .contact a:visited:hover{
+    display: block;
+    padding: 5px 45px;
+    margin: 5px 5px;
+    border: solid 2px #F44;
+    text-decoration: none;
+    color: #F44;
+}
+
+.contact.active a, .contact.active a:visited{
+    background-color: #FF0;
+    border: solid 2px #FF0;
+    color: #000;
+}

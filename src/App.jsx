@@ -1,18 +1,38 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+import { useState } from "react"
 
-// Pages
-import MainPage from './pages/MainPage/MainPage'
+import Conversation from "./components/Conversation"
+import Header from "./components/Header"
+import NewMessage from "./components/NewMessage"
+import Sidebar from "./components/Sidebar"
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/:id" element={<MainPage/>}/>
-        <Route path="/" element={<MainPage/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
+	const[user, setUser] = useState(0)
+	const[messages, setMessages] = useState([])
+	const[currentMessage, setCurrentMessage] = useState("")
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		if(currentMessage !== "") setMessages([...messages, {user, message: currentMessage}])
+		setCurrentMessage("")
+	}
+
+	return (
+		<div style={{backgroundColor: "#111"}}>
+			{/* , minHeight: "95vh" */}
+			<Sidebar/>
+
+			<div>
+				<Header/>
+
+				<div style={{height: "90vh"}}>
+					<Conversation messages={messages} user={user}/>
+				
+					<NewMessage currentMessage={currentMessage} setCurrentMessage={setCurrentMessage} handleSubmit={handleSubmit}
+								user={user} setUser={setUser}/>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default App

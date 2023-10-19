@@ -1,0 +1,50 @@
+/* Typing Bar Container */
+
+.message{
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: calc(100vw - 200px);
+    border-top: solid 2px #FF0;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    background-color: #000;
+}
+
+/* Inputs */
+
+.message input{
+    background-color: #000;
+    color: #FF0;
+    border: solid 2px #FF0;
+}
+
+/* Contact */
+
+.message input[type=number]{
+    max-width: 80px;
+    margin-right: 20px;
+    text-align: center;
+    appearance: textfield;
+}
+
+/* Message */
+
+.message input[type=text]{
+    min-width: 30%;
+}
+
+/* Sending Button */
+
+.message input[type=submit]{
+    margin-left: 20px;
+}
+
+.message input[type=submit]:hover{
+    background-color: #FF0;
+    color: #000;
+    border: solid 2px #444;
+    cursor: pointer;
+}

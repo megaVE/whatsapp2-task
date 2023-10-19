@@ -1,0 +1,48 @@
+/* Conversation Container */
+
+.conversation{
+    position: fixed;
+    top: 85px;
+    right: 0;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 85px);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    /* overflow-y: scroll; */
+}
+
+/* Message Container */
+
+.message li::before{
+    content: "\2022";
+    color: #FF0;
+}
+
+.message li{
+    display: flex;
+    align-items: center;
+}
+
+.message li p{
+    margin-left: 10px;
+    color: #FF0;
+}
+
+/* Last Message Button */
+
+/*
+.lastMessage{
+    position: sticky;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+} */
+
+.lastMessage a{
+    text-decoration: none;
+    border: solid 2px #FF0;
+    padding: 3px;
+    color: #FF0;
+}
